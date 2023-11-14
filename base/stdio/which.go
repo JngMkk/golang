@@ -16,7 +16,6 @@ func main() {
 	file := args[1]
 	path := os.Getenv("PATH")
 	pathSplit := filepath.SplitList(path) // 운영체제에 따라 적절한 방법을 이용해 경로의 목록을 슬라이스로 분리해줌.
-	fmt.Println(pathSplit)
 	for _, dir := range pathSplit {
 		fullPath := filepath.Join(dir, file) // 운영체제마다 다른 구분자를 사용해 경로의 부분들을 합쳐줌.
 
